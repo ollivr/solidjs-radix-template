@@ -1,17 +1,19 @@
 import { Slider } from '@ark-ui/solid'
 import { splitProps, type JSX } from 'solid-js'
 
-import { cx } from '~/lib/utils'
+import {cn, cx}                                from '~/lib/utils'
 import { buttonVariants, type ButtonVariants } from '~/styled/components/button'
 import { cardVariants } from '~/styled/components/card'
 import { headingVariants } from '~/styled/components/heading'
 import { sliderVariants } from '~/styled/components/slider'
-import { textVariants } from '~/styled/components/text'
+import { textVariants }              from '~/styled/components/text'
+import {avatarAttrs, avatarVariants} from "~/styled/components/avatar";
 
 export const Demo = () => (
   <div class="flex flex-col items-start gap-6">
     <div class="flex w-[416px] flex-shrink-0 flex-col gap-6 [transform:scale(0.8)]">
       <Card1 />
+        <img class={cx(avatarVariants.root({ variant: 'solid', size: '9' }))} src={"https://workos.imgix.net/images/79645741-51e0-47fc-bb40-2fa66cf9f68e.png?auto=format&fit=clip&q=80&w=192"}/>
       <Card2 />
     </div>
   </div>
